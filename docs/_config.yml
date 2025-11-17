@@ -1,0 +1,17 @@
+# GitHub Pages configuration for ContextOS
+# Minimal config to disable Jekyll's default theme processing
+
+# Disable Jekyll processing for cleaner deployment
+theme: null
+plugins: []
+
+# Site metadata
+title: ContextOS
+description: Create zero-step Agentic AI with ContextOS
+url: https://xfey.github.io
+baseurl: /ContextOS
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - project_overview.md

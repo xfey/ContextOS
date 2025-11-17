@@ -1,0 +1,24 @@
+config_version: 0.3.1
+system:
+  log_level: DEBUG
+  max_concurrent_sessions: 10
+user:
+  default_language: Chinese
+pipeline:
+  queue_size: 100
+engine:
+  llm_provider: openai
+  llm_model: qwen3-vl-flash   # we use Qwen3-VL as example
+  llm_base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  llm_api_key: "your_api_key"  # Enter your API key here
+  llm_timeout: 60
+  max_retries: 3
+  react:
+    max_iterations: 20
+session:
+  max_turns:
+    review: -1
+inbox:
+  max_display_sessions: 20
+  auto_archive_completed: true
+  archive_delay: 60

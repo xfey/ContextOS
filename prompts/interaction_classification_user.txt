@@ -1,0 +1,4 @@
+Classify the following intent (with content and/or image) into the appropriate interaction level.
+
+**Intent Target:** {target}
+**Intent Context:** {text}

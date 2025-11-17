@@ -1,0 +1,8 @@
+## Task
+
+**User's follow up query**: {text}
+
+**Previous Steps**:
+{history}
+
+Begin! Remember to think step by step and use tools when needed.

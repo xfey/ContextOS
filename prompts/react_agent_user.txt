@@ -1,0 +1,12 @@
+## Task
+
+**User Intent**: 
+{intent_target}
+
+**Context Information**:
+{text}
+
+**Previous Steps**:
+{history}
+
+Begin! Remember to think step by step and use tools when needed.

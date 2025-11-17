@@ -1,0 +1,20 @@
+# ContextOS Data Sources Configuration
+config_version: "0.3.1"
+
+adapters:
+- name: clipboard
+  type: event
+  enabled: true
+  config:
+    poll_interval: 1
+    filters:
+      min_length: 5
+      max_length: 2048
+- name: screenshot
+  type: stream
+  enabled: false
+  config:
+    capture_interval: 30
+    resolution: 1920x1080
+    buffer_size: 10
+    deduplicate_threshold: 0.95
