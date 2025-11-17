@@ -2,7 +2,7 @@
 
 **[中文](README_cn.md) | English**
 
-[Highlights](#highlights) | [Quick Start](#quick-start) | [Architecture](#architecture) | [Contributing](#contributing)
+[Highlights](#highlights) | [Quick Start](#quick-start) | [Architecture](#architecture) | [Contributing](#contributing) | [🌐 Website](https://xfey.github.io/ContextOS/)
 
 The first **AI-Centric** Proactive Agent Framework — transforming AI from "waiting for commands" to "actively serving".
 
