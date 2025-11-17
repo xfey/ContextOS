@@ -10,7 +10,7 @@ from PyQt5.QtWidgets import (
     QLineEdit, QGridLayout, QGroupBox, QComboBox
 )
 from PyQt5.QtCore import Qt, pyqtSignal, QThread
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QPalette, QColor
 from utils.logger import get_logger
 from utils.llm_client import LLMClient
 from version import __version__, APP_DISPLAY_NAME
@@ -111,6 +111,23 @@ class SettingsDialog(QDialog):
         self.setWindowTitle("Settings - Tools & Data Sources")
         self.setMinimumSize(800, 700)
         self.resize(900, 900)
+
+        # Force light mode for this dialog
+        light_palette = QPalette()
+        light_palette.setColor(QPalette.Window, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.WindowText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Base, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.AlternateBase, QColor(245, 245, 245))
+        light_palette.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.ToolTipText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Text, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Button, QColor(240, 240, 240))
+        light_palette.setColor(QPalette.ButtonText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.BrightText, QColor(255, 0, 0))
+        light_palette.setColor(QPalette.Link, QColor(42, 130, 218))
+        light_palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+        light_palette.setColor(QPalette.HighlightedText, QColor(255, 255, 255))
+        self.setPalette(light_palette)
 
         # Main layout
         layout = QVBoxLayout()

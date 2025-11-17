@@ -16,6 +16,7 @@ import os
 import signal
 
 from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import Qt
 from core.orchestrator import Orchestrator
 from utils.logger import get_logger
 
@@ -56,6 +57,27 @@ def main():
         logger.info("Creating application")
         app = QApplication(sys.argv)
         app.setApplicationName("Context OS")
+
+        # Force light mode (disable dark mode)
+        app.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+
+        # Set light palette to override system dark mode
+        from PyQt5.QtGui import QPalette, QColor
+        light_palette = QPalette()
+        light_palette.setColor(QPalette.Window, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.WindowText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Base, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.AlternateBase, QColor(245, 245, 245))
+        light_palette.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.ToolTipText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Text, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Button, QColor(240, 240, 240))
+        light_palette.setColor(QPalette.ButtonText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.BrightText, QColor(255, 0, 0))
+        light_palette.setColor(QPalette.Link, QColor(42, 130, 218))
+        light_palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+        light_palette.setColor(QPalette.HighlightedText, QColor(255, 255, 255))
+        app.setPalette(light_palette)
 
         # Enable Ctrl+C handling in Qt
         import signal

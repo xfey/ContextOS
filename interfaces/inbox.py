@@ -10,7 +10,7 @@ from PyQt5.QtWidgets import (
     QSplitter, QStackedWidget, QLabel, QAction
 )
 from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtGui import QFont, QCloseEvent
+from PyQt5.QtGui import QFont, QCloseEvent, QPalette, QColor
 
 from models.session import Session
 from interfaces.utils import SessionListWidget
@@ -78,6 +78,23 @@ class Inbox(QMainWindow):
         Must be called from the main Qt thread.
         """
         logger.info("Initializing Inbox UI...")
+
+        # Force light mode for this window
+        light_palette = QPalette()
+        light_palette.setColor(QPalette.Window, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.WindowText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Base, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.AlternateBase, QColor(245, 245, 245))
+        light_palette.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))
+        light_palette.setColor(QPalette.ToolTipText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Text, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.Button, QColor(240, 240, 240))
+        light_palette.setColor(QPalette.ButtonText, QColor(0, 0, 0))
+        light_palette.setColor(QPalette.BrightText, QColor(255, 0, 0))
+        light_palette.setColor(QPalette.Link, QColor(42, 130, 218))
+        light_palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+        light_palette.setColor(QPalette.HighlightedText, QColor(255, 255, 255))
+        self.setPalette(light_palette)
 
         # Setup window
         self.setWindowTitle("ContextOS")
