@@ -117,17 +117,12 @@ class Detector:
         
         system_prompt = self.llm_client.load_prompt(
             'intent_detection_system',
-            user_lang=self.user_config.get('default_language', 'Chinese')
-        )
-        
-        prompt = self.llm_client.load_prompt(
-            'intent_detection_user',
-            text=text,
+            user_lang=self.user_config.get('default_language', 'Chinese'),
             source=signal.source
         )
         
         llm_call_content = []
-        llm_call_content.append({'type': 'text', 'text': prompt})
+        llm_call_content.append({'type': 'text', 'text': text})
         if image:
             llm_call_content.append({'type': 'image_url', 'image_url': {"url": image}})
 

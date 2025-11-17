@@ -1,3 +1,0 @@
-Analyze the content (and/or image) from {source} and determine the intent:
-
-**Context:** {text}
