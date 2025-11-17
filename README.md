@@ -52,7 +52,7 @@ ContextOS uses the OpenAI API format. Keep the `Provider` field as `OpenAI` (def
 
 ### Model Recommendations
 
-- **For users in China**: `qwen3-vl-flash` (Qwen offers free quota, fast response, supports images)
+- **For users in China**: `qwen3-vl-flash` (Qwen offers free quota, fast response, supports images; register at [Aliyun website](https://bailian.console.aliyun.com/?tab=api#/api/?type=model&url=2712576))
 - **Other options**: Try various models from [OpenRouter](https://openrouter.ai/)
 
 **Tip**: Choose "faster" over "larger" models. Lower latency significantly improves user experience.

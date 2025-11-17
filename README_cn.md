@@ -54,7 +54,7 @@ ContextOS 使用 OpenAI 接口格式进行调用，`Provider` 一项请使用默
 
 ### 模型选择建议
 
-- **中国用户推荐**：`qwen3-vl-flash`（通义千问提供免费额度，同时访问的响应较快）
+- **中国用户推荐**：`qwen3-vl-flash`（通义千问提供免费额度，同时访问的响应较快；点击注册[阿里云官网](https://bailian.console.aliyun.com/?tab=api#/api/?type=model&url=2712576)）
 - **其他选择**：可尝试 [OpenRouter](https://openrouter.ai/) 提供的各类模型
 
 **提示**：推荐选择「更快」而非「更大」的模型，更低的时延会带来明显更好的使用体验。
