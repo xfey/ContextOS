@@ -33,7 +33,7 @@ The goal is to provide a clear and extensible framework that gives large languag
   - For image support: Use vision models (e.g., `gpt-4o`, `qwen3-vl-flash`)
   - For text-only tasks: Standard models work fine (e.g., `gpt-5-mini`, `qwen-plus`)
 
-#### Installation Guide
+### Installation Guide
 
 1. Open the downloaded `.dmg` file and drag ContextOS to the Applications folder
 2. Wait a moment, then find the ContextOS icon in Launchpad
@@ -50,7 +50,7 @@ ContextOS uses the OpenAI API format. Keep the `Provider` field as `OpenAI` (def
 - `Model`: Model name, e.g., `gpt-4o` or `qwen3-vl-flash`
 - `API Key`: Your API key string
 
-#### Model Recommendations
+### Model Recommendations
 
 - **For users in China**: `qwen3-vl-flash` (Qwen offers free quota, fast response, supports images)
 - **Other options**: Try various models from [OpenRouter](https://openrouter.ai/)
@@ -58,6 +58,10 @@ ContextOS uses the OpenAI API format. Keep the `Provider` field as `OpenAI` (def
 **Tip**: Choose "faster" over "larger" models. Lower latency significantly improves user experience.
 
 After setup, the system will automatically verify your API key. If network issues cause failures, try again.
+
+### Build ContextOS
+
+For developers, you can just run `bash build.sh` to build this project on your own. Try it!
 
 
 ## Architecture
@@ -74,7 +78,7 @@ ContextOS consists of four main modules:
 
 - **Interface**: Renders the user interface and manages session state. Users receive notifications through the Inbox and can interact with the system. Based on task complexity, two interaction modes are available: Notify (auto-complete) and Review (multi-turn conversation).
 
-#### Design Principles
+### Design Principles
 
 ContextOS aims to be a clear and extensible architecture. Key design features include:
 
@@ -91,7 +95,7 @@ The hope is that developers will build on ContextOS to create more features and 
 
 **Do you need a UI?**: The visual interface quickly demonstrates ContextOS's capabilities. If you only need the core flow as a backend, you can skip the complex `interfaces` module and keep just the core data pipeline.
 
-#### Current Limitations
+### Current Limitations
 
 ContextOS is still a work in progress. Some challenges encountered during development:
 
