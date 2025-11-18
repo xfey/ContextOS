@@ -39,10 +39,12 @@ The goal is to provide a clear and extensible framework that gives large languag
 2. Wait a moment, then find the ContextOS icon in Launchpad
 3. Grant permissions when prompted
    > ContextOS needs clipboard access to provide context-aware assistance
-4. If you see "App blocked from opening", go to System Settings → Privacy & Security and click Allow
-5. Before first use, configure a valid LLM API key and set your preferred language
+4. If you see "App blocked from opening", go to System Settings → Privacy & Security and click "Open Anyway" at the bottom
+5. Before using, configure a valid LLM API key and set your preferred language
 
 ### Configure LLM API
+
+🎉 We've provide API key for free trial! Let's try it: [Release](https://github.com/xfey/ContextOS/releases/tag/v0.3.1)
 
 ContextOS uses the OpenAI API format. Keep the `Provider` field as `OpenAI` (default), then configure:
 
