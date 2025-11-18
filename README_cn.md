@@ -10,7 +10,7 @@ The first **AI-Centric** Proactive Agent Framework
 
 ![ContextOS Demo](docs/demos/demo.gif)
 
-试用基于 ContextOS 开发的 demo 产品：Zero-step Clipboard
+试用基于 ContextOS 开发的 demo 产品：Zero-step Clipboard。不再需要手动向大模型提问；每次复制内容，大模型便「知你所想」，主动为你提供帮助。
 
 - 下载 `.dmg` 文件：[Releases](https://github.com/xfey/ContextOS/releases)
 - 如何使用：[查看安装说明](#安装说明)
@@ -37,14 +37,15 @@ The first **AI-Centric** Proactive Agent Framework
 
 ### 安装说明
 
-1. 打开下载的 `.dmg` 文件，将 ContextOS App 拖拽到「应用程序」文件夹内
-2. 稍等片刻，在启动台内，就会有 ContextOS 图标以供使用
+1. 打开下载的 `.dmg` 文件，将 ContextOS App 拖拽到「应用程序」文件夹内，完成安装
+2. 如果首次启动显示「阻止了应用程序启动」，请在「系统设置-隐私与安全」最下方点击允许
 3. 如果弹出相关权限申请，请在系统设置中开启
    > ContextOS 需要剪贴板等权限以作为上下文输入
-4. 如果首次启动显示「阻止了应用程序启动」，请在系统设置-隐私与安全中点击允许
-5. 首次使用前，请设置一个有效的大模型 API key，并且切换您的默认语言
+4. 首次使用前，请设置一个有效的大模型 API key
 
 ### 配置 LLM API
+
+🎉 试用期间，我们提供了免费的 API key 以供直接使用：[点击下载试用](https://github.com/xfey/ContextOS/releases/tag/v0.3.1)
 
 ContextOS 使用 OpenAI 接口格式进行调用，`Provider` 一项请使用默认的 `OpenAI` 不要更改。然后配置以下项目：
 
